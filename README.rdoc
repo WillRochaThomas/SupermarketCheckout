@@ -21,6 +21,7 @@ the following resources handy:
 
 * The Getting Started Guide: http://guides.rubyonrails.org/getting_started.html
 * Ruby on Rails Tutorial Book: http://www.railstutorial.org/
+* BDD with Cucumber and Rails: https://github.com/cucumber/cucumber/wiki/Cucumber-Backgrounder
 
 == Description of Contents
 
@@ -42,6 +43,7 @@ The core directory structure of the application (only non-standard or interestin
 
 app
   Holds all the code that's specific to this particular application.
+  It follow the Rails project default structure, including models, views, controllers etc.
 
 config
   Configuration files for the Rails environment, the routing map, the database,
