@@ -5,7 +5,7 @@ gem 'rails', '3.2.7'
 gem 'sqlite3'
 
 
-group :test do
+group :development, :test do
   gem 'rspec', '2.11.0'
   gem 'rspec-rails', '2.11.0'
   gem 'cucumber-rails', '1.3.0', :require => false
