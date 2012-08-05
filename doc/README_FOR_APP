@@ -1,0 +1,17 @@
+Reevoo's quest for global domination has prompted them to open a supermarket – it sells only three products:
+
+|Product code|Name|Price|
+|FR1|Fruit tea|£ 3.11|
+|SR1|Strawberries|£ 5.00|
+|CF1|Coffee|£11.23|
+
+The supermarket offers some buy-one-get-one-free offers, as well as discounts for bulk purchases.
+
+The most interesting part of the API is the checkout. The interface looks like this:
+
+co = Checkout.new(pricing_rules)
+co.scan(item)
+co.scan(item)
+Price = co.total
+
+Items can be scanned in any order, and the total will reflect any promotions or discounts currently available.

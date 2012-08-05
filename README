@@ -1,1 +1,19 @@
-This file was created by JetBrains RubyMine 4.5.1 for binding GitHub repository
+I've attempted to develop a simple supermarket application in Ruby on Rails.
+
+The supermarket only sells three products:
+
+|Product code|Name|Price|
+|FR1|Fruit tea|£ 3.11|
+|SR1|Strawberries|£ 5.00|
+|CF1|Coffee|£11.23|
+
+The supermarket does offer some price promotions, such as  buy-one-get-one-free and discounts for bulk purchases.
+
+Central to the API is a the concept of a Checkout.
+The checkout can scan items in any order, and calculate the correct total price taking into consideration any price promotions.
+
+The interface to the checkout looks like this (shown in Ruby):
+co = Checkout.new(pricing_rules)
+co.scan(item)
+co.scan(item)
+Price = co.total
