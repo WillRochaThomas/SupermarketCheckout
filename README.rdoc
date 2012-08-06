@@ -1,6 +1,6 @@
 == Welcome to SupermarketCheckout
 
-I've attempted to develop a simple supermarket application using Ruby on Rails.
+I've attempted to develop a simple online marketplace using Ruby on Rails.
 
 Rails is a web-application framework that includes everything needed to create
 database-backed web applications according to the Model-View-Control pattern.
@@ -17,7 +17,7 @@ database-backed web applications according to the Model-View-Control pattern.
 3. From the same directory, start the web server:
        <tt>rails server</tt> (run with --help for options)
 
-3. Go to http://localhost:3000/ and you'll see the supermarket home page.
+4. Go to http://localhost:3000/ and you'll see the supermarket home page.
 
 
 == NOTE: Some features may be partially developed
