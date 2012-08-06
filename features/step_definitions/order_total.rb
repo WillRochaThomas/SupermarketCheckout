@@ -1,3 +1,6 @@
-Then /^my order total should be (\d{1,3}(\,\d{3})*|(\d+))(\.\d{2})? GBP$/ do |expectedTotal|
-  pending
+#coding: utf-8
+
+Then /^my order total should be £(\d*(?:\.\d{2}))$/ do |expectedTotal|
+  order_total = 'Total: £' + expectedTotal
+  page.should have_content(order_total)
 end

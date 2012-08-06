@@ -1,4 +1,7 @@
 SupermarketCheckout::Application.routes.draw do
+
+  get "store/checkout"
+
   root :to => 'products#index'
 
   resources :basket_items
@@ -9,7 +12,5 @@ SupermarketCheckout::Application.routes.draw do
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
-
-
 
 end

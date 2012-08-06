@@ -1,3 +1,3 @@
 When /^I checkout$/ do
-  pending
+  visit('/store/checkout')
 end
