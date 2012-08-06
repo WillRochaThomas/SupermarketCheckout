@@ -11,6 +11,8 @@ group :development, :test do
   gem 'cucumber-rails', '1.3.0', :require => false
   gem 'database_cleaner', '0.8.0'
   gem 'webrat', '0.7.3'
+  gem 'ramcrest', '0.1.0'
+  gem 'spork-rails', '3.2.0'
 end
 
 # Gems used only for assets and not required
