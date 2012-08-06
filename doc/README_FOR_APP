@@ -9,7 +9,7 @@ The supermarket offers some buy-one-get-one-free offers, as well as discounts fo
 
 The most interesting part of the API is the checkout. The interface looks like this:
 
-co = Checkout.new(pricing_rules)
+co = Checkout.new
 co.scan(item)
 co.scan(item)
 Price = co.total

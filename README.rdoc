@@ -11,7 +11,10 @@ database-backed web applications according to the Model-View-Control pattern.
 1. At the command prompt, clone this repository:
        <tt>git clone https://github.com/WillJThomas/SupermarketCheckout.git</tt>
 
-2. Change directory to <tt>SupermarketCheckout</tt> and start the web server:
+2. Change directory to <tt>SupermarketCheckout</tt> and use rake to setup your database:
+        <tt>cd SupermarketCheckout; rake db:setup</tt>
+
+3. From the same directory, start the web server:
        <tt>cd SupermarketCheckout; rails server</tt> (run with --help for options)
 
 3. Go to http://localhost:3000/ and you'll see the supermarket home page.
@@ -68,6 +71,7 @@ config
 db
   Contains the database schema in schema.rb. db/migrate contains all the
   sequence of Migrations for your schema.
+  seeds.rb contains initial data loaded into database when setting up the application.
 
 doc
   Extra documentation for the application, explaining the core API in more detail.
