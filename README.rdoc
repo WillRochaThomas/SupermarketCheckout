@@ -15,7 +15,7 @@ database-backed web applications according to the Model-View-Control pattern.
         <tt>cd SupermarketCheckout; rake db:setup</tt>
 
 3. From the same directory, start the web server:
-       <tt>cd SupermarketCheckout; rails server</tt> (run with --help for options)
+       <tt>rails server</tt> (run with --help for options)
 
 3. Go to http://localhost:3000/ and you'll see the supermarket home page.
 
@@ -31,7 +31,12 @@ To get a clear understanding of what features are/are not complete, follow these
           <tt>rake cucumber</tt>
 
 3. Each test corresponds to an application feature. If a test passes, it's fair to assume the feature is complete.
-   If a test fails due to 'pending' steps, this indicates most likely the feature is only partially complete.
+   If feature is only partially complete, you might see a message like this:
+         <tt>1 scenario (1 pending)
+             3 steps (1 skipped, 1 pending, 1 passed)</tt>
+
+   In this example, the feature's test has three steps (given, when, then) and only one has been implemented so far.
+   The rest of the functionality to complete this feature is pending.
 
 == Extending the application
 
