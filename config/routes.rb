@@ -1,4 +1,6 @@
 ReevooCheckout::Application.routes.draw do
+  resources :basket_items
+
   resources :checkouts
 
   resources :products
