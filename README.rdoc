@@ -36,7 +36,8 @@ To get a clear understanding of what features are/are not complete, follow these
          3 steps (1 skipped, 1 pending, 1 passed)
 
    In this example, the feature's test has three steps (given, when, then) and only one passed.
-   This means the test's first step has been implemented, but the rest of the functionality for this feature is pending.
+   This means just enough functionality to setup the test's preconditions has been implemented (the 'Given' step passes).
+   The bulk of the feature is still pending.
 
 == Extending the application
 
