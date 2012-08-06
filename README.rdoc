@@ -35,9 +35,9 @@ To get a clear understanding of what features are/are not complete, follow these
          1 scenario (1 pending)
          3 steps (1 skipped, 1 pending, 1 passed)
 
-   In this example, the feature's test has three steps (given, when, then) and only one passed.
-   This means just enough functionality to setup the test's preconditions has been implemented (the 'Given' step passes).
-   The bulk of the feature is still pending.
+   A scenario equates to one test. Each scenario may have a number of steps to complete, as part of the test.
+   In this example, the feature's test has three steps: one passed, the next step was marked as 'pending' (not implemented yet) and as a result the last step was skipped.
+   This means just enough functionality to pass the first step has been implemented, and the bulk of the feature is still not implemented.
 
 == Extending the application
 
