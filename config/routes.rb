@@ -1,4 +1,6 @@
 ReevooCheckout::Application.routes.draw do
+  root :to => 'products#index'
+
   resources :basket_items
 
   resources :checkouts
@@ -7,6 +9,7 @@ ReevooCheckout::Application.routes.draw do
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
+
 
 
 end

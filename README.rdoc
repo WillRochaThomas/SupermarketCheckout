@@ -16,7 +16,23 @@ database-backed web applications according to the Model-View-Control pattern.
 
 3. Go to http://localhost:3000/ and you'll see the supermarket home page.
 
-4. If you wish to extend the application. You may find the following resources handy:
+
+== NOTE: Some features may be partially developed
+
+The application is currently under development, and as such some features may not be complete.
+To get a clear understanding of what features are/are not complete, follow these steps:
+
+1. Change directory to the application's base directory (<tt>SupermarketCheckout</tt>).
+
+2. Run all the behavioural tests:
+          <tt>rake cucumber</tt>
+
+3. Each test corresponds to an application feature. If a test passes, it's fair to assume the feature is complete.
+   If a test fails due to 'pending' steps, this indicates most likely the feature is only partially complete.
+
+== Extending the application
+
+If you wish to extend the application. You may find the following resources handy:
 
 * The Getting Started Guide: http://guides.rubyonrails.org/getting_started.html
 * Ruby on Rails Tutorial Book: http://www.railstutorial.org/
@@ -35,6 +51,7 @@ The core directory structure of the application (only non-standard or interestin
   |   `-- tasks
   |-- log
   |-- public
+  |-- spec
   |-- script
   |-- test
   |-- vendor
@@ -73,6 +90,9 @@ public
 script
   Helper scripts for automation and generation
   e.g. cucumber scripts for generating new behavioural tests.
+
+spec
+  All the unit and integration tests written using RSpec.
 
 test
   Unit and functional tests along with fixtures.
