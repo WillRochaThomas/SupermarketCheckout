@@ -1,4 +1,4 @@
-ReevooCheckout::Application.configure do
+SupermarketCheckout::Application.configure do
   # Settings specified here will take precedence over those in config/application.rb
 
   config.cache_classes = false

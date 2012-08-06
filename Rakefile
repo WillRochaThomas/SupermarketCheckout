@@ -4,4 +4,4 @@
 
 require File.expand_path('../config/application', __FILE__)
 
-ReevooCheckout::Application.load_tasks
+SupermarketCheckout::Application.load_tasks

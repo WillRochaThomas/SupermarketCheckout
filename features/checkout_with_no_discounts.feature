@@ -1,4 +1,4 @@
-Feature:
+Feature: Checkout with no discounts
   In order to check I am being charged the correct amount
   As a customer
   I want to review my order total on checkout

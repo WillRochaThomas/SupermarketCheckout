@@ -1,4 +1,4 @@
-ReevooCheckout::Application.routes.draw do
+SupermarketCheckout::Application.routes.draw do
   root :to => 'products#index'
 
   resources :basket_items

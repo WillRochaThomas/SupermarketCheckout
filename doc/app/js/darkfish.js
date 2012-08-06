@@ -80,6 +80,7 @@ function hookSearch() {
     var li = document.createElement('li');
     var html = '';
 
+    // TODO add relative path to <script> per-page
     html += '<p class="search-match"><a href="' + rdoc_rel_prefix + result.path + '">' + this.hlt(result.title);
     if (result.params)
       html += '<span class="params">' + result.params + '</span>';
