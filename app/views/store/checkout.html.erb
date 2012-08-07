@@ -1,2 +1,26 @@
-<h1>Store#checkout</h1>
-<p>Total: £22.25</p>
+<h1>Items in Your Basket</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Price</th>
+  </tr>
+
+
+  <% my_items = @checkout.basket_items %>
+  <% my_items.each do |item| %>
+      <tr>
+        <td><%= item.name %></td>
+        <td><%= '£' + item.price %></td>
+      </tr>
+  <% end %>
+
+  <tr>
+    <td><%='Total: '%></td>
+    <td><%= '£' + @checkout.total %></td>
+  </tr>
+
+</table>
+
+<br />
+
