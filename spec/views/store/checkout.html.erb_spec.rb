@@ -4,9 +4,10 @@ require 'spec_helper'
 describe "store/checkout" do
 
   before(:each) do
-    @items = [stub_model(BasketItem, :name => 'tea', :price => '4.00'),
-              stub_model(BasketItem, :name => 'coffee', :price => '6.00')]
-    assign(:checkout, stub_model(Checkout, :total => '10.00', :basket_items => @items))
+    tea_product = stub_model(Product, :name => 'tea', :price => '4.00')
+    coffee_product = stub_model(Product, :name => 'coffee', :price => '6.00')
+    @items = [tea_product, coffee_product]
+    assign(:checkout, stub_model(Checkout, :total => '10.00', :products => @items))
   end
 
   it "should display an itemised list of the products in the user's basket" do

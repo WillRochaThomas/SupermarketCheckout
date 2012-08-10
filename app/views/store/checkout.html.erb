@@ -10,14 +10,14 @@
   <% my_items = @checkout.basket_items %>
   <% my_items.each do |item| %>
       <tr>
-        <td><%= item.name %></td>
-        <td><%= '£' + item.price %></td>
+        <td><%= item.product.name %></td>
+        <td><%= number_to_currency(item.price, :unit => '£') %></td>
       </tr>
   <% end %>
 
   <tr>
     <td><%='Total: '%></td>
-    <td><%= '£' + @checkout.total %></td>
+    <td><%= number_to_currency(@checkout.total, :unit => '£') %></td>
   </tr>
 
 </table>

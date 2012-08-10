@@ -1,3 +1,11 @@
 class BasketItem < ActiveRecord::Base
-  attr_accessible :checkout_id, :product_id
+  belongs_to :product
+  belongs_to :checkout
+
+  attr_accessible :product
+
+  def price
+    product.price
+  end
+
 end

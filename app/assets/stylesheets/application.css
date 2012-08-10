@@ -11,3 +11,8 @@
  *= require_self
  *= require_tree .
  */
+
+#fixed-header {
+    display: inline-block;
+    float: left;
+}

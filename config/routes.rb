@@ -1,8 +1,8 @@
 SupermarketCheckout::Application.routes.draw do
 
-  get "store/checkout"
-
   root :to => 'products#index'
+
+  get "store/checkout"
 
   resources :basket_items
 

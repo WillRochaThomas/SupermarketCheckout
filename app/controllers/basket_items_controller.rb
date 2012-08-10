@@ -40,14 +40,24 @@ class BasketItemsController < ApplicationController
   # POST /basket_items
   # POST /basket_items.json
   def create
-    @basket_item = BasketItem.new(params[:basket_item])
+    checkout = current_checkout
+
+    product = Product.find(params[:product_id])
+    @basket_item = BasketItem.new(:product => product)
+
+    scanned_at_checkout = true
+    if @basket_item.save
+      checkout.scan(@basket_item)
+    else
+      scanned_at_checkout = false
+    end
 
     respond_to do |format|
-      if @basket_item.save
-        format.html { redirect_to @basket_item, notice: 'Basket item was successfully created.' }
+      if scanned_at_checkout
+        format.html { redirect_to product, notice: 'Basket item was successfully created.' }
         format.json { render json: @basket_item, status: :created, location: @basket_item }
       else
-        format.html { render action: "new" }
+        format.html { redirect_to product, notice: 'Oops! We were not able to add this to your basket, contact customer services for assistance.' }
         format.json { render json: @basket_item.errors, status: :unprocessable_entity }
       end
     end

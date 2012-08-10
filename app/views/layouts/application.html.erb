@@ -7,7 +7,7 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-
+    <div class="fixed-header"><%= button_to 'Checkout', store_checkout_path, :method => "get" %></div>
 <%= yield %>
 
 </body>
