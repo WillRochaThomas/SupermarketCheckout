@@ -1,16 +1,5 @@
 Given /^my basket contains (\d+) fruit tea\(s\), (\d+) punnet\(s\) of strawberries, and (\d+) packet\(s\) of coffee$/ do |teas_in_basket, strawberries_in_basket, coffees_in_basket|
-
-  tea_product_code = 'FR1'
-  tea = Product.find(:first, :conditions => [ "product_code = ?", tea_product_code])
-  url_of_tea_product = '/products/' + tea.id.to_s
-
-  teas_added = 0
-
-  until teas_added == teas_in_basket.to_i do
-    visit(url_of_tea_product)
-    click_button('Add to Basket')
-    teas_added += 1
-  end
+  step "my basket contains #{teas_in_basket} fruit tea\(s\)"
 
   strawberries_product_code = 'SR1'
   strawberries = Product.find(:first, :conditions => [ "product_code = ?", strawberries_product_code])
