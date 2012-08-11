@@ -1,4 +1,5 @@
 class Checkout < ActiveRecord::Base
+  include CheckoutPriceCalculator
   has_many :basket_items, :dependent => :destroy
 
   def scan (item)
@@ -9,7 +10,8 @@ class Checkout < ActiveRecord::Base
     total = 0
 
     basket_items.each do |item|
-      total += item.price
+      price = checkout_price_for(item)
+      total += price
     end
 
     return total

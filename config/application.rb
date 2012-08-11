@@ -30,5 +30,7 @@ module SupermarketCheckout
     config.assets.enabled = true
 
     config.assets.version = '1.0'
+
+    config.autoload_paths += %W(#{Rails.root}/app/concerns)
   end
 end
