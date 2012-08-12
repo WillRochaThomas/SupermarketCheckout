@@ -54,7 +54,7 @@ class BasketItemsController < ApplicationController
 
     respond_to do |format|
       if scanned_at_checkout
-        format.html { redirect_to product, notice: 'Basket item was successfully created.' }
+        format.html { redirect_to product, notice: 'We successfully added that item to your basket.' }
         format.json { render json: @basket_item, status: :created, location: @basket_item }
       else
         format.html { redirect_to product, notice: 'Oops! We were not able to add this to your basket, contact customer services for assistance.' }
@@ -70,7 +70,7 @@ class BasketItemsController < ApplicationController
 
     respond_to do |format|
       if @basket_item.update_attributes(params[:basket_item])
-        format.html { redirect_to @basket_item, notice: 'Basket item was successfully updated.' }
+        format.html { redirect_to @basket_item, notice: 'We successfully updated that item in your basket.' }
         format.json { head :no_content }
       else
         format.html { render action: "edit" }
